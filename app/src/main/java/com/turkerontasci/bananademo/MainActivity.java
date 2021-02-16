@@ -17,13 +17,14 @@ public class MainActivity extends AppCompatActivity {
 
     CardView cvRemote, cvLights, cvDevices;
 
-    String weatherCondition[] = {"21°C Güneşli", "15°C Bulutlu"};
+    String weatherCondition[] = {"21°C Güneşli", "15°C Bulutlu", "0°C Karlı"};
     TextView currentCondition;
     ImageView weatherImage;
 
     Integer conditionImage[] = {
             R.drawable.ic_baseline_wb_sunny_24,
-            R.drawable.ic_baseline_cloud_24
+            R.drawable.ic_baseline_cloud_24,
+            R.drawable.ic_snowflake
     };
 
     private void setWeatherCondition(int selectedCondition) {
@@ -33,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         } else if (selectedCondition == 1) {
             weatherImage.setImageResource(conditionImage[1]);
             currentCondition.setText(weatherCondition[1]);
+        } else if (selectedCondition == 2) {
+            weatherImage.setImageResource(conditionImage[2]);
+            currentCondition.setText(weatherCondition[2]);
         }
     }
 
@@ -44,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         currentCondition = findViewById(R.id.currentWeather);
         weatherImage = findViewById(R.id.weatherImage);
 
-        setWeatherCondition(0);
+        setWeatherCondition(2);
 
         cvRemote = findViewById(R.id.card1);
         cvLights = findViewById(R.id.card2);
