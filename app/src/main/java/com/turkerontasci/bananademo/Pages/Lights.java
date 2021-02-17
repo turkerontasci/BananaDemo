@@ -2,6 +2,8 @@ package com.turkerontasci.bananademo.Pages;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.bluetooth.BluetoothDevice;
+import android.companion.WifiDeviceFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -38,7 +40,7 @@ public class Lights extends AppCompatActivity {
         lightAddImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Bluetooth cihazlarına erişerek yeni ışık ekle
+                //Bluetooth veya WiFi cihazlarına erişerek yeni ışık ekle
             }
         });
 
